@@ -32,4 +32,15 @@ public class ProductService {
 
         prodrepo.save(prod);
     }
+
+    public void updateProduct(Product prod) {
+
+        prodrepo.save(prod);
+    }
+
+    public void deleteProductById(int prodId) {
+
+        prodrepo.deleteById(prodId);
+
+    }
 }
