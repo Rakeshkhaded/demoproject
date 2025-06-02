@@ -1,6 +1,7 @@
 package com.example.demoproject.Controller;
 
 import com.example.demoproject.Entity.Product;
+import com.example.demoproject.Error.ProductNotFoundException;
 import com.example.demoproject.Service.ProductService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class ProductController {
     }
 
     @GetMapping("/products/{prodId}")
-    public Product getProductById(@PathVariable int prodId){
+    public Product getProductById(@PathVariable int prodId) throws ProductNotFoundException {
 
         return service.getProductById(prodId);
 
